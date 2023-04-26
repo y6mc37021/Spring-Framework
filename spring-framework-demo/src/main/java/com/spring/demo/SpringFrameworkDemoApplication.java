@@ -4,6 +4,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.spring.demo.game.GameRunner;
 import com.spring.demo.game.MarioGame;
+import com.spring.demo.game.PacManGame;
 import com.spring.demo.game.SuperContraGame;
 
 @SpringBootApplication
@@ -19,6 +20,11 @@ public class SpringFrameworkDemoApplication {
 		SuperContraGame contra = new SuperContraGame();
 		GameRunner contraGameRunner = new GameRunner(contra);
 		contraGameRunner.run();
+		
+		
+		PacManGame pacman = new PacManGame();
+		GameRunner pacmanGameRunner = new GameRunner(pacman);
+		pacmanGameRunner.run();
 		
 	}
 
