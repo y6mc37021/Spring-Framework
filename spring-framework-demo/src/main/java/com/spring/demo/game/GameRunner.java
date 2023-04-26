@@ -1,15 +1,16 @@
 package com.spring.demo.game;
 
 public class GameRunner {
-	private MarioGame mario;
+	private GamingConsole console;
 
-	public GameRunner(MarioGame mario) {
-		this.mario=mario;
+	public GameRunner(GamingConsole console) {
+		this.console=console;
 	}
+	
 
 	public void run() {
-		mario.down();
-		mario.up();
+		console.down();
+		console.up();
 	}
 
 }
