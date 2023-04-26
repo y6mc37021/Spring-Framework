@@ -1,30 +1,22 @@
 package com.spring.demo;
 
+import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
 import com.spring.demo.game.GameRunner;
-import com.spring.demo.game.MarioGame;
-import com.spring.demo.game.PacManGame;
-import com.spring.demo.game.SuperContraGame;
 
 @SpringBootApplication
 public class SpringFrameworkDemoApplication {
-
+	
 	public static void main(String[] args) {
 		//SpringApplication.run(SpringFrameworkDemoApplication.class, args);
 		
-		MarioGame mario = new MarioGame();
-		GameRunner marioGameRunner = new GameRunner(mario);
-		marioGameRunner.run();
-		
-		SuperContraGame contra = new SuperContraGame();
-		GameRunner contraGameRunner = new GameRunner(contra);
-		contraGameRunner.run();
+		ConfigurableApplicationContext context = SpringApplication.run(SpringFrameworkDemoApplication.class, args);
+		GameRunner gameRunner = context.getBean(GameRunner.class);
+		gameRunner.run();
 		
 		
-		PacManGame pacman = new PacManGame();
-		GameRunner pacmanGameRunner = new GameRunner(pacman);
-		pacmanGameRunner.run();
 		
 	}
 

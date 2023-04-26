@@ -1,5 +1,6 @@
 package com.spring.demo.game;
 
+//@Component
 public class PacManGame implements GamingConsole{
 	
 	public void up() {

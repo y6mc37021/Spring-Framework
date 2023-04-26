@@ -1,5 +1,6 @@
 package com.spring.demo.game;
 
+//@Component
 public class SuperContraGame implements GamingConsole{
 	
 	public void up() {
